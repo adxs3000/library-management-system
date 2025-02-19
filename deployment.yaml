@@ -21,10 +21,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: evershop-service
+  name: Library_Management-service
 spec:
   selector:
-    app: evershop
+    app: Library_Management
   ports:
     - protocol: TCP
       port: 80  # Exposing port 80
