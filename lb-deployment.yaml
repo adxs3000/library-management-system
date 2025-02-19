@@ -1,30 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: library_management-deployment
+  name: library-management-deployment
 spec:
   replicas: 1  # You can adjust this based on how many instances you want
   selector:
     matchLabels:
-      app: library_management
+      app: library-management
   template:
     metadata:
       labels:
-        app: library_management
+        app: library-management
     spec:
       containers:
-      - name: library_management
-        image: archit3000/library_management:latest
+      - name: library-management
+        image: archit3000/library-management:latest
         ports:
         - containerPort: 3000  # Adjust based on your app's port
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: library_management-service
+  name: library-management-service
 spec:
   selector:
-    app: library_management
+    app: library-management
   ports:
     - protocol: TCP
       port: 80  # Exposing port 80
