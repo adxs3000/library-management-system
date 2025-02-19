@@ -22,8 +22,6 @@ FROM nginx:alpine
 
 # Copy the build output from the previous build stage
 COPY --from=build /app/build /usr/share/nginx/html
-
-# Expose the port the app will run on
 EXPOSE 80
 
 # Start Nginx server
